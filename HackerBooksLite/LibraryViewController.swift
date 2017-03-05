@@ -7,18 +7,24 @@
 //
 
 import UIKit
+import CoreData
 
-class LibraryViewController: UITableViewController {
+class LibraryViewController: UIViewController {
 
-    private
-    let _model : Library
+    //MARK: - Properties
+    private let _model : Library_old
+    var context: NSManagedObjectContext?
+    var fetchedResultsController: NSFetchedResultsController<BookTag>? = nil
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     
     
     var delegate : LibraryViewControllerDelegate?
     
     
     //MARK: - Init & Lifecycle
-    init(model: Library, style : UITableViewStyle = .plain) {
+    init(model: Library_old, style : UITableViewStyle = .plain) {
         _model = model
         super.init(nibName: nil, bundle: nil)   // default options
         title = "HackerBooks"
@@ -26,6 +32,18 @@ class LibraryViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        guard let _ = context else { return }
+        
+        subscribeFavuritesChanged()
+        
+        fetchedResultsController?.delegate = self
+        
+        searchBar.delegate = self
+        
+        let lastOpened = BookTag.getLastOpened(context: self.context!)
+        
+        
         
         registerNib()
     }
@@ -76,30 +94,22 @@ class LibraryViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        
-        
         // Find the book
         let tag = _model.tags[indexPath.section]
         let book = _model.book(forTagName: tag._name, at: indexPath.row)!
         
-        
         // Create the cell
         let cell = tableView.dequeueReusableCell(withIdentifier: BookTableViewCell.cellID, for: indexPath) as! BookTableViewCell
-        
         
         // Sync model (book) -> View (cell)
         cell.startObserving(book: book)
         
-        
         return cell
-        
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return BookTableViewCell.cellHeight
     }
-    
     
     //MARK: - Delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -113,15 +123,24 @@ class LibraryViewController: UITableViewController {
         
         // Load it
         navigationController?.pushViewController(bookVC, animated: true)
-        
-        
-        
     }
     
     override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         // The cell was just hidden: stop observing
         let cell = tableView.cellForRow(at: indexPath) as! BookTableViewCell
         cell.stopObserving()
+    }
+    
+    func subscribeFavuritesChanged(){
+        let nc = NotificationCenter.default
+        nc.addObserver(self, selector: #selector(listDidChanged),
+                       name: NSNotification.Name(rawValue:constants.tableViewChanged),
+                       object: nil)
+    }
+    
+    func listDidChanged(notification: NSNotification){
+        self.fetchedResultsController = BookTag.fetchController(context: self.context!, text: searchBar.text!)
+        self.tableView.reloadData()
     }
     
     //MARK: - Notifications
@@ -148,11 +167,9 @@ class LibraryViewController: UITableViewController {
 
 }
 
-
-
 //MARK: - Delegate protocol
 protocol LibraryViewControllerDelegate {
-    func libraryViewController(_ sender: LibraryViewController, didSelect selectedBook:Book)
+    func libraryViewController(_ sender: LibraryViewController, didSelect selectedBook:Book_old)
 }
 
 

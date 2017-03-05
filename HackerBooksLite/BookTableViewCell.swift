@@ -16,13 +16,10 @@ class BookTableViewCell: UITableViewCell {
     
     
     //MARK: - private interface
-    private
-    var _book : Book?
+    private var _book : Book_old?
     
-    private
-    let _nc = NotificationCenter.default
-    private
-    var _bookObserver : NSObjectProtocol?
+    private let _nc = NotificationCenter.default
+    private var _bookObserver : NSObjectProtocol?
     
     //MARK: - Outlets
     @IBOutlet weak var coverView: UIImageView!
@@ -34,28 +31,23 @@ class BookTableViewCell: UITableViewCell {
     // The view will directly observe the model
     // This is OK, when the view is highly specific as
     // in this case
-    func startObserving(book: Book){
+    func startObserving(book: Book_old){
         _book = book
         _nc.addObserver(forName: BookCoverImageDidDownload, object: _book, queue: nil) { (n: Notification) in
             self.syncWithBook()
         }
         syncWithBook()
-
-        
     }
     
     func stopObserving(){
-        
         if let observer = _bookObserver{
             _nc.removeObserver(observer)
             _bookObserver = nil
             _book = nil
         }
-        
     }
     
     //MARK: - Lifecycle
-    
     // Sets the view in a neutral state, before being reused
     override func prepareForReuse() {
         stopObserving()
@@ -74,16 +66,13 @@ class BookTableViewCell: UITableViewCell {
                           duration: 0.7,
                           options: [.transitionCrossDissolve],
                           animations: { 
-                            self.coverView.image =  UIImage(data: (self._book?._image.data)!)
+                            self.coverView.image =  UIImage(data: (self._book?._image._data)!)
             }, completion: nil)
-        
         
         titleView.text = _book?.title
         authorsView.text = _book?.formattedListOfAuthors()
         tagsView.text = _book?.formattedListOfTags()
-        
     }
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -95,8 +84,4 @@ class BookTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
-    
-    
-    
 }

@@ -10,13 +10,13 @@ import UIKit
 
 class PDFViewController: UIViewController{
     
-    var _model : Book?
+    var _model : Book_old?
     var _bookObserver : NSObjectProtocol?
     
     @IBOutlet weak var browserView: UIWebView!
 
     
-    init(model: Book){
+    init(model: Book_old){
         _model = model
         super.init(nibName: nil, bundle: nil)
         title = _model?.title

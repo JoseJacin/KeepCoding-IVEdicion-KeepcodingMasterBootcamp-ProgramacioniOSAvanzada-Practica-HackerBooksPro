@@ -11,14 +11,14 @@ import UIKit
 // Use typealias early. It provides extra information to the reader.
 // If you later need to expand one of them into fullblown
 // class or structure, it won't break your code!
-typealias Author = String
-typealias Authors = [Author]
+//typealias Author = String
+typealias Authors = [String]
 typealias Title = String
 typealias PDF = AsyncData
 typealias Image = AsyncData
 
 
-class Book{
+class Book_old{
     let _authors : Authors
     let _title   : Title
     var _tags    : Tags
@@ -63,19 +63,19 @@ class Book{
 
 
 //MARK: - Favorites
-extension Book{
+extension Book_old{
     
     private func hasFavoriteTag()->Bool{
-        return _tags.contains(Tag.favoriteTag())
+        return _tags.contains(Tag_old.favoriteTag())
     }
     
     
     private func addFavoriteTag(){
-        _tags.insert(Tag.favoriteTag())
+        _tags.insert(Tag_old.favoriteTag())
     }
     
     private func removeFavoriteTag() {
-        _tags.remove(Tag.favoriteTag())
+        _tags.remove(Tag_old.favoriteTag())
     }
     
     
@@ -99,7 +99,7 @@ extension Book{
     
 }
 //MARK: - Protocols
-extension Book: Hashable{
+extension Book_old: Hashable{
     
     var proxyForHashing : String{
         get{
@@ -111,19 +111,19 @@ extension Book: Hashable{
     }
 }
 
-extension Book : Equatable{
+extension Book_old : Equatable{
     var proxyForComparison : String{
         // Favorite always first
         return "\(isFavorite ? "A" : "Z")\(_title)\(formattedListOfAuthors())"
     }
     
-    static func ==(lhs: Book, rhs: Book) -> Bool{
+    static func ==(lhs: Book_old, rhs: Book_old) -> Bool{
         return lhs.proxyForComparison == rhs.proxyForComparison
     }
 }
 
-extension Book : Comparable{
-    static func <(lhs: Book, rhs: Book) -> Bool{
+extension Book_old : Comparable{
+    static func <(lhs: Book_old, rhs: Book_old) -> Bool{
         return lhs.proxyForComparison < rhs.proxyForComparison
     }
 }
@@ -131,17 +131,16 @@ extension Book : Comparable{
 
 //MARK: - Communication - delegate
 protocol BookDelegate: class{
-    func bookDidChange(sender:Book)
-    func bookCoverImageDidDownload(sender: Book)
-    func bookPDFDidDownload(sender: Book)
+    func bookDidChange(sender:Book_old)
+    func bookCoverImageDidDownload(sender: Book_old)
+    func bookPDFDidDownload(sender: Book_old)
 }
 
 // Default implementation of delegate methods
 extension BookDelegate{
-    
-    func bookDidChange(sender:Book){}
-    func bookCoverImageDidDownload(sender: Book){}
-    func bookPDFDidDownload(sender: Book){}
+    func bookDidChange(sender:Book_old){}
+    func bookCoverImageDidDownload(sender: Book_old){}
+    func bookPDFDidDownload(sender: Book_old){}
 }
 
 let BookDidChange = Notification.Name(rawValue: "io.keepCoding.BookDidChange")
@@ -150,20 +149,18 @@ let BookKey = "io.keepCoding.BookDidChange.BookKey"
 let BookCoverImageDidDownload = Notification.Name(rawValue: "io.keepCoding.BookCoverImageDidDownload")
 let BookPDFDidDownload = Notification.Name(rawValue: "io.keepCoding.BookPDFDidDownload")
 
-extension Book{
+extension Book_old{
     
     func sendNotification(name: Notification.Name){
         
         let n = Notification(name: name, object: self, userInfo: [BookKey:self])
         let nc = NotificationCenter.default
         nc.post(n)
-        
     }
 }
 
-
 //MARK: - AsyncDataDelegate
-extension Book: AsyncDataDelegate{
+extension Book_old: AsyncDataDelegate{
     
     func asyncData(_ sender: AsyncData, didEndLoadingFrom url: URL) {
         

@@ -7,16 +7,20 @@
 //
 
 import UIKit
+import CoreData
 
 class BookViewController: UIViewController {
 
     //MARK: - Init
-    var _model : Book
+    var context: NSManagedObjectContext?
     
-    init(model: Book){
+    
+    
+    var _model : Book_old
+    
+    init(model: Book_old){
         _model = model
         super.init(nibName: nil, bundle: nil)
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -39,9 +43,9 @@ class BookViewController: UIViewController {
         _model.isFavorite = !_model.isFavorite
         
     }
+    
     //MARK: - Syncing
-    func syncViewWithModel(book: Book){
-        
+    func syncViewWithModel(book: Book_old){
         coverView.image = UIImage(data: _model._image.data)
         title = _model.title
         if _model.isFavorite{
@@ -50,7 +54,6 @@ class BookViewController: UIViewController {
             favoriteItem.title = "☆"
         }
         title = _model.title
-        
     }
     
     //MARK: - LifeCycle
@@ -70,29 +73,25 @@ class BookViewController: UIViewController {
     let _nc = NotificationCenter.default
     var bookObserver : NSObjectProtocol?
     
-    func startObserving(book: Book){
+    func startObserving(book: Book_old){
         bookObserver = _nc.addObserver(forName: BookDidChange, object: book, queue: nil){ (n: Notification) in
             self.syncViewWithModel(book: book)
         }
     }
     
-    func stopObserving(book:Book){
+    func stopObserving(book:Book_old){
         guard let observer = bookObserver else{
             return
         }
         _nc.removeObserver(observer)
     }
-    
 }
 
 extension BookViewController: LibraryViewControllerDelegate{
-    
-    func libraryViewController(_ sender: LibraryViewController,
-                               didSelect selectedBook:Book){
+    internal func libraryViewController(_ sender: LibraryViewController, didSelect selectedBook:Book_old){
         stopObserving(book: _model)
         _model = selectedBook
         startObserving(book: selectedBook)
-        
     }
 }
 

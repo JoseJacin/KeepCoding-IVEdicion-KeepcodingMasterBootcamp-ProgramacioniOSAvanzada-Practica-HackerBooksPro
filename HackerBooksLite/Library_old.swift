@@ -1,5 +1,5 @@
 //
-//  Library.swift
+//  Library_old.swift
 //  HackerBooksLite
 //
 //  Created by Fernando Rodríguez Romero on 8/14/16.
@@ -9,17 +9,17 @@
 import Foundation
 
 //MARK: - MultiDict
-typealias Books = MultiDictionary<Tag, Book>
+typealias Books = MultiDictionary<Tag_old, Book_old>
 
-//MARK: - Library
-class Library {
+//MARK: - Library_old
+class Library_old {
     
     var _books : Books
     
     var _bookObserver : NSObjectProtocol?
     
     //MARK: - Lifecycle
-    init(books : [Book]){
+    init(books : [Book_old]){
         
         _books = Books()
         
@@ -34,7 +34,7 @@ class Library {
     }
     
     private
-    func loadBooks(bookList: [Book]){
+    func loadBooks(bookList: [Book_old]){
         
         for book in bookList{
             for tag in book.tags{
@@ -53,7 +53,7 @@ class Library {
     // if the Tag is not present, returns zero
     func bookCount(forTagName name: TagName) -> Int{
         
-        let tag = Tag(name: name)
+        let tag = Tag_old(name: name)
         
         if let bucket = _books[tag] {
             return bucket.count
@@ -68,9 +68,9 @@ class Library {
     // be in several tags.
     // If the tag doesn't exists or there are no book sin it
     // returns an empty optional
-    func books(forTagName name: TagName) -> [Book]?{
+    func books(forTagName name: TagName) -> [Book_old]?{
         
-        guard let books = _books[Tag(name:name)] else {
+        guard let books = _books[Tag_old(name:name)] else {
             return nil
         }
         
@@ -83,11 +83,11 @@ class Library {
     }
     
     
-    // Book at the index position within the Tag. If either the index
+    // Book_old at the index position within the Tag. If either the index
     // or tag doesn't exist, should return nil
-    func book(forTagName name: TagName, at:Int)-> Book?{
+    func book(forTagName name: TagName, at:Int)-> Book_old?{
         
-        guard let books = _books[Tag(name: name)] else{
+        guard let books = _books[Tag_old(name: name)] else{
             return nil
         }
         
@@ -100,7 +100,7 @@ class Library {
     }
     
     // Sorted Tags
-    var tags : [Tag]{
+    var tags : [Tag_old]{
         get{
             return _books.keys.sorted()
         }
@@ -109,7 +109,7 @@ class Library {
 }
 
 //MARK: - Notifications
-extension Library{
+extension Library_old{
     
     // We observe the BookDidChange notification that
     // tells me that the favorite switch has been flipped
@@ -119,11 +119,11 @@ extension Library{
             (n: Notification) in
             
             // Extract the book
-            let book = n.userInfo![BookKey] as! Book
+            let book = n.userInfo![BookKey] as! Book_old
             
             
             // Create a Favorite tag
-            let fav = Tag.favoriteTag()
+            let fav = Tag_old.favoriteTag()
             
             // if it's favorite, add it to the Favorite bucket,
             // otherwise remove it from there

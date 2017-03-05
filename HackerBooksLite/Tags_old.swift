@@ -8,14 +8,14 @@
 
 import Foundation
 
-typealias Tags = Set<Tag>
+typealias Tags = Set<Tag_old>
 typealias TagName = String
 
 struct TagConstants{
     static let favoriteTag = "Favorite"
 }
 
-struct Tag{
+struct Tag_old{
     
     let _name : TagName
     
@@ -23,7 +23,7 @@ struct Tag{
         _name = name.capitalized
     }
     
-    static func favoriteTag()->Tag{
+    static func favoriteTag()->Tag_old{
         return self.init(name: TagConstants.favoriteTag)
     }
     
@@ -34,7 +34,7 @@ struct Tag{
 
 //MARK: - Hashable
 // Since tags will go into a MultiDictionary, they must be hashable
-extension Tag: Hashable{
+extension Tag_old: Hashable{
     public var hashValue: Int {
         return _name.hashValue
     }
@@ -44,16 +44,16 @@ extension Tag: Hashable{
 // To be hashable, you must be equatable
 // As of swift 3.0, operators can be declared in
 // extension
-extension Tag : Equatable{
-    static func ==(lhs: Tag, rhs: Tag) -> Bool{
+extension Tag_old : Equatable{
+    static func ==(lhs: Tag_old, rhs: Tag_old) -> Bool{
         return (lhs._name == rhs._name)
     }
 }
 
 
 //MARK: - Comparable
-extension Tag: Comparable{
-    static func <(lhs: Tag, rhs: Tag) -> Bool{
+extension Tag_old: Comparable{
+    static func <(lhs: Tag_old, rhs: Tag_old) -> Bool{
         
         if lhs.isFavorite(){
             return true

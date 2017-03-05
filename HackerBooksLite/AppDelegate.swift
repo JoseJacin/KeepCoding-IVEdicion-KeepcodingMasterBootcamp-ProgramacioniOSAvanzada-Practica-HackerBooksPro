@@ -7,19 +7,39 @@
 //
 
 import UIKit
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
     
     var window: UIWindow?
-    var model : Library?
+    var context: NSManagedObjectContext?
     
-    
-    func application(_ application: UIApplication,
-                     didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         // Clean up all local caches
         AsyncData.removeAllLocalFiles()
+        
+        // Context instance
+        let container = persistentContainer(dbName: constants.dbName) { (error: NSError) in
+            fatalError("Unresolved error \(error), \(error.userInfo)")
+        }
+        
+        self.context = container.viewContext
+        
+        // Validate if the app is run for the first time
+        if(isFirstTimeLaunched()){
+            
+            loadingViewController()
+            JSONInteractor(manager: DownloadAsyncGCD()).execute(urlString: constants.urlFileJSON, context: context!) { (Void) in
+                setLaunched()
+                //self.loadViewController()
+            }
+        }else{
+//            loadViewController()
+        }
+        
+        return true
         
         // Create the window
         window = UIWindow.init(frame: UIScreen.main.bounds)
@@ -33,8 +53,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
             let data = try Data(contentsOf: url)
             let jsonDicts = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? JSONArray
             
-            let books = try decode(books: jsonDicts)
-            model = Library(books: books)
+            //let books = try decode(books: jsonDicts)
+            //model = Library_old(books: books)
             
         }catch {
             fatalError("Error while loading model")
@@ -42,14 +62,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         
         
         // Create the rootVC
-        let rootVC = LibraryViewController(model: model!, style: .plain)
-        window?.rootViewController = rootVC.wrappedInNavigationController()
+       // let rootVC = LibraryViewController(model: model!, style: .plain)
+        //window?.rootViewController = rootVC.wrappedInNavigationController()
         
         // Display
         window?.makeKeyAndVisible()
         
         return true
     }
+    
     
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -73,6 +94,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    
+    func loadingViewController(){
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let loadController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "LoadingController")
+        
+        self.window?.rootViewController = loadController
+    }
+    
+    func loadViewController(){
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let navController: UINavigationController = mainStoryboard.instantiateViewController(withIdentifier: "NavigationController") as! UINavigationController
+        
+        self.window?.rootViewController = navController
+        
+        self.injectContextAndFetchToFirstViewController()
+        
+        self.window?.makeKeyAndVisible()
+    }
+    
+    func injectContextAndFetchToFirstViewController(){
+        if let navController = window?.rootViewController as? UINavigationController,
+            let initialViewController = navController.topViewController as? LibraryViewController{
+            initialViewController.context = self.context
+            initialViewController.fetchedResultsController = BookTag.fetchController(context: context!, text: "")
+        }
+    }
+    
 }
 
