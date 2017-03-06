@@ -52,6 +52,8 @@
 		33E6B6421E5FBC2F005E00C5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E6B6411E5FBC2F005E00C5 /* Constants.swift */; };
 		33E6B6451E5FBCDA005E00C5 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E6B6441E5FBCDA005E00C5 /* Bundle.swift */; };
 		33E6B6471E5FBD29005E00C5 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E6B6461E5FBD29005E00C5 /* Errors.swift */; };
+		DF3C84191E6CFABF0012FB7A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3C84181E6CFABF0012FB7A /* CloudKit.framework */; };
+		DF3C841B1E6CFBDD0012FB7A /* HackerBooksPro.entitlements in Sources */ = {isa = PBXBuildFile; fileRef = DF3C841A1E6CFBDD0012FB7A /* HackerBooksPro.entitlements */; };
 		DFAAC8931E6B2C710009D93F /* HackerBooksPro-defaultBookCover.png in Resources */ = {isa = PBXBuildFile; fileRef = DFAAC8921E6B2C710009D93F /* HackerBooksPro-defaultBookCover.png */; };
 		DFAAC8971E6B2D1E0009D93F /* HackerBooksPro-defaultPdf.pdf in Resources */ = {isa = PBXBuildFile; fileRef = DFAAC8961E6B2D1E0009D93F /* HackerBooksPro-defaultPdf.pdf */; };
 		DFAAC8991E6C2BEB0009D93F /* HackerBooksPro-defaultImageAnnotation.png in Resources */ = {isa = PBXBuildFile; fileRef = DFAAC8981E6C2BEB0009D93F /* HackerBooksPro-defaultImageAnnotation.png */; };
@@ -66,11 +68,11 @@
 		3319D0C81E67AF7100E33ADE /* Photo+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Photo+Utils.swift"; sourceTree = "<group>"; };
 		3319D0CA1E67B3F300E33ADE /* AddEditAnnotationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEditAnnotationViewController.swift; sourceTree = "<group>"; };
 		3319D0CC1E6890B900E33ADE /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
-		3319D0CE1E68C68F00E33ADE /* AddEditAnnotationViewController+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AddEditAnnotationViewController+Utils.swift"; path = "AddEditAnnotationViewController+Utils.swift"; sourceTree = "<group>"; };
+		3319D0CE1E68C68F00E33ADE /* AddEditAnnotationViewController+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AddEditAnnotationViewController+Utils.swift"; sourceTree = "<group>"; };
 		3319D0D01E68F57200E33ADE /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		3319D0D21E6A1E4500E33ADE /* Location+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Location+Utils.swift"; sourceTree = "<group>"; };
 		3319D0D41E6A23DF00E33ADE /* MapPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPin.swift; sourceTree = "<group>"; };
-		3319D0D61E6A291B00E33ADE /* MapViewController+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "MapViewController+Utils.swift"; path = "MapViewController+Utils.swift"; sourceTree = "<group>"; };
+		3319D0D61E6A291B00E33ADE /* MapViewController+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MapViewController+Utils.swift"; sourceTree = "<group>"; };
 		335FB6371E618D7A00A7DCD7 /* DownloadAsync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadAsync.swift; sourceTree = "<group>"; };
 		335FB6391E618E8A00A7DCD7 /* DownloadAsyncGCD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadAsyncGCD.swift; sourceTree = "<group>"; };
 		335FB63B1E619A9700A7DCD7 /* Author+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Author+Utils.swift"; sourceTree = "<group>"; };
@@ -80,17 +82,17 @@
 		335FB6441E619EF400A7DCD7 /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		335FB6461E61A20600A7DCD7 /* Typealias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		335FB6481E61A2BC00A7DCD7 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		335FB64A1E6227A600A7DCD7 /* BooksViewController+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "BooksViewController+Utils.swift"; path = "BooksViewController+Utils.swift"; sourceTree = "<group>"; };
+		335FB64A1E6227A600A7DCD7 /* BooksViewController+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BooksViewController+Utils.swift"; sourceTree = "<group>"; };
 		335FB64C1E6227FB00A7DCD7 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		335FB64E1E63799D00A7DCD7 /* FirstTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTime.swift; sourceTree = "<group>"; };
 		335FB6501E6382CE00A7DCD7 /* BookTag+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BookTag+Utils.swift"; sourceTree = "<group>"; };
 		33B835361E64A3390030A440 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		33B835381E64A4F40030A440 /* SingleBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleBookViewController.swift; sourceTree = "<group>"; };
-		33B8353A1E64A5380030A440 /* PDFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PDFViewController.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
+		33B8353A1E64A5380030A440 /* PDFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
 		33B8353C1E64D3230030A440 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		33B8353E1E6783810030A440 /* AnnotationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationsViewController.swift; sourceTree = "<group>"; };
 		33B835401E6784FD0030A440 /* AnnotationsViewControllerFetchedResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationsViewControllerFetchedResults.swift; sourceTree = "<group>"; };
-		33B835421E6785380030A440 /* AnnotationsViewController+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AnnotationsViewController+Utils.swift"; path = "AnnotationsViewController+Utils.swift"; sourceTree = "<group>"; };
+		33B835421E6785380030A440 /* AnnotationsViewController+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AnnotationsViewController+Utils.swift"; sourceTree = "<group>"; };
 		33B835441E678DB10030A440 /* Annotation+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Annotation+Utils.swift"; sourceTree = "<group>"; };
 		33E6B5F91E5F8DAA005E00C5 /* HackerBooksPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerBooksPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33E6B5FC1E5F8DAA005E00C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,12 +109,13 @@
 		33E6B6411E5FBC2F005E00C5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		33E6B6441E5FBCDA005E00C5 /* Bundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		33E6B6461E5FBD29005E00C5 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		DF3C84181E6CFABF0012FB7A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		DF3C841A1E6CFBDD0012FB7A /* HackerBooksPro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = HackerBooksPro.entitlements; path = ../HackerBooksPro.entitlements; sourceTree = "<group>"; };
 		DFAAC8921E6B2C710009D93F /* HackerBooksPro-defaultBookCover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HackerBooksPro-defaultBookCover.png"; sourceTree = "<group>"; };
 		DFAAC8961E6B2D1E0009D93F /* HackerBooksPro-defaultPdf.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "HackerBooksPro-defaultPdf.pdf"; sourceTree = "<group>"; };
 		DFAAC8981E6C2BEB0009D93F /* HackerBooksPro-defaultImageAnnotation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HackerBooksPro-defaultImageAnnotation.png"; sourceTree = "<group>"; };
 		DFB4387B1E6C7B5200EE8645 /* NSUbiquitousKeyValueStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSUbiquitousKeyValueStore.swift; sourceTree = "<group>"; };
 		DFEE70271E6C8FEF00974308 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		DFEE70291E6C943A00974308 /* HackerBooksPro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HackerBooksPro.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFEE70281E6C8FEF00974308 /* MapKit.framework in Frameworks */,
+				DF3C84191E6CFABF0012FB7A /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,7 +138,6 @@
 				335FB6371E618D7A00A7DCD7 /* DownloadAsync.swift */,
 				335FB6391E618E8A00A7DCD7 /* DownloadAsyncGCD.swift */,
 			);
-			name = Managers;
 			path = Managers;
 			sourceTree = "<group>";
 		};
@@ -145,7 +148,6 @@
 				335FB6441E619EF400A7DCD7 /* Interactor.swift */,
 				335FB6401E619D9D00A7DCD7 /* JSONInteractor.swift */,
 			);
-			name = Interactors;
 			path = Interactors;
 			sourceTree = "<group>";
 		};
@@ -158,7 +160,6 @@
 				DFAAC8961E6B2D1E0009D93F /* HackerBooksPro-defaultPdf.pdf */,
 				33E6B60B1E5F8DAA005E00C5 /* Info.plist */,
 			);
-			name = Assets;
 			path = Assets;
 			sourceTree = "<group>";
 		};
@@ -183,9 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				33E6B6351E5FB07E005E00C5 /* App */,
-				DFEE70291E6C943A00974308 /* HackerBooksPro.entitlements */,
 			);
-			name = HackerBooksPro;
 			path = HackerBooksPro;
 			sourceTree = "<group>";
 		};
@@ -236,6 +235,8 @@
 		33E6B6351E5FB07E005E00C5 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				DF3C841A1E6CFBDD0012FB7A /* HackerBooksPro.entitlements */,
+				33E6B5FC1E5F8DAA005E00C5 /* AppDelegate.swift */,
 				335FB6561E63C9CE00A7DCD7 /* Assets */,
 				33E6B6131E5F8DC5005E00C5 /* Controller */,
 				33E6B6431E5FBCC4005E00C5 /* Frameworks */,
@@ -244,7 +245,6 @@
 				335FB6361E618D4400A7DCD7 /* Managers */,
 				33E6B6111E5F8DB9005E00C5 /* Model */,
 				33E6B6121E5F8DC0005E00C5 /* View */,
-				33E6B5FC1E5F8DAA005E00C5 /* AppDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -297,6 +297,7 @@
 		DFEE70261E6C8FEF00974308 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DF3C84181E6CFABF0012FB7A /* CloudKit.framework */,
 				DFEE70271E6C8FEF00974308 /* MapKit.framework */,
 			);
 			name = Frameworks;
@@ -338,6 +339,9 @@
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 1;
 							};
 							com.apple.iCloud = {
 								enabled = 1;
@@ -385,6 +389,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF3C841B1E6CFBDD0012FB7A /* HackerBooksPro.entitlements in Sources */,
 				3319D0C11E67975C00E33ADE /* Pdf+Utils.swift in Sources */,
 				33E6B63A1E5FB99F005E00C5 /* BooksViewControllerFetchedResults.swift in Sources */,
 				3319D0D31E6A1E4600E33ADE /* Location+Utils.swift in Sources */,
