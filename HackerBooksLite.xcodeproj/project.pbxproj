@@ -177,33 +177,36 @@
 			isa = PBXGroup;
 			children = (
 				DF8EB9BB1E69F0E6008EE780 /* Constants.swift */,
-				DF8EB9C01E69F390008EE780 /* FirstTimeLaunched.swift */,
-				EDB3AE681D67A5F70023A807 /* JSONProcessing.swift */,
 				DFD9E2401E6ABEFB004F0D5F /* Errors.swift */,
 				DFD9E2421E6AC07E004F0D5F /* Files.swift */,
-				DFD9E2441E6AC6C9004F0D5F /* TypeAlias.swift */,
+				DF8EB9C01E69F390008EE780 /* FirstTimeLaunched.swift */,
+				EDB3AE681D67A5F70023A807 /* JSONProcessing.swift */,
 				DFD9E2461E6AD666004F0D5F /* Parser.swift */,
+				DFD9E2441E6AC6C9004F0D5F /* TypeAlias.swift */,
 			);
 			name = Helpers;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		DF8EB9BD1E69F176008EE780 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				DF8EB9BE1E69F18B008EE780 /* CoreDataManager.swift */,
-				DFD9E2481E6ADAF1004F0D5F /* DownloadAsyncGCD.swift */,
 				DFD9E24A1E6ADB20004F0D5F /* DownloadAsync.swift */,
+				DFD9E2481E6ADAF1004F0D5F /* DownloadAsyncGCD.swift */,
 			);
 			name = Managers;
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		DFD9E24C1E6ADC14004F0D5F /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
-				DFD9E24D1E6ADC28004F0D5F /* JSONInteractor.swift */,
 				DFD9E24F1E6ADC51004F0D5F /* Interactor.swift */,
+				DFD9E24D1E6ADC28004F0D5F /* JSONInteractor.swift */,
 			);
 			name = Interactors;
+			path = Interactors;
 			sourceTree = "<group>";
 		};
 		DFD9E2511E6ADDE6004F0D5F /* Fetchedresults */ = {
@@ -212,25 +215,27 @@
 				DFD9E2531E6ADE1E004F0D5F /* BookViewControllerFetchedResults.swift */,
 			);
 			name = Fetchedresults;
+			path = Fetchedresults;
 			sourceTree = "<group>";
 		};
 		ED4908A21D5D02BA00212410 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				ED4908A31D5D02DA00212410 /* Books_old.swift */,
-				ED0788C11D60D8F200C4773C /* Tags_old.swift */,
-				ED0788CB1D6165A000C4773C /* Library_old.swift */,
-				DF8EB9B81E69EFE5008EE780 /* Book+Utils.swift */,
-				DFD9E22F1E6A17D6004F0D5F /* Author+Utils.swift */,
-				DFD9E2311E6A19C2004F0D5F /* Tag+Utils.swift */,
-				DFD9E2331E6A1AE3004F0D5F /* BookTag+Utils.swift */,
-				DFD9E2371E6A1FD4004F0D5F /* Pdf+Utils.swift */,
-				DFD9E2391E6A2034004F0D5F /* Cover+Utils.swift */,
 				DFD9E23B1E6A20DB004F0D5F /* Annotation+Utils.swift */,
 				DFD9E23E1E6A2239004F0D5F /* AnnotationPhoto+Utils.swift */,
+				DFD9E22F1E6A17D6004F0D5F /* Author+Utils.swift */,
+				DF8EB9B81E69EFE5008EE780 /* Book+Utils.swift */,
+				DFD9E2331E6A1AE3004F0D5F /* BookTag+Utils.swift */,
+				ED4908A31D5D02DA00212410 /* Books_old.swift */,
+				DFD9E2391E6A2034004F0D5F /* Cover+Utils.swift */,
 				DF272FDA1E661C9B00B9DCBC /* HackerBooksLite.xcdatamodeld */,
+				ED0788CB1D6165A000C4773C /* Library_old.swift */,
+				DFD9E2371E6A1FD4004F0D5F /* Pdf+Utils.swift */,
+				DFD9E2311E6A19C2004F0D5F /* Tag+Utils.swift */,
+				ED0788C11D60D8F200C4773C /* Tags_old.swift */,
 			);
 			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		ED8E53F41D359AB100DD8F94 = {
@@ -264,9 +269,9 @@
 		ED8E54161D359AB100DD8F94 /* HackerBooksLiteTests */ = {
 			isa = PBXGroup;
 			children = (
-				EDB3AE7B1D6A6E180023A807 /* Resources */,
 				EDC9E17B1D4A74A000E4D047 /* App */,
 				EDC9E17A1D4A748900E4D047 /* Framework */,
+				EDB3AE7B1D6A6E180023A807 /* Resources */,
 				ED8E54191D359AB100DD8F94 /* Info.plist */,
 			);
 			path = HackerBooksLiteTests;
@@ -285,13 +290,14 @@
 			isa = PBXGroup;
 			children = (
 				DFD9E2511E6ADDE6004F0D5F /* Fetchedresults */,
-				EDA79C551D66A219001A27F7 /* Controllers.swift */,
 				EDB3AE861D6BC7890023A807 /* BookTableViewCell.swift */,
-				EDA79C561D66A219001A27F7 /* LibraryViewController.swift */,
 				EDB3AE821D6ACAE80023A807 /* BookViewController.swift */,
+				EDA79C551D66A219001A27F7 /* Controllers.swift */,
+				EDA79C561D66A219001A27F7 /* LibraryViewController.swift */,
 				ED3B1E091D6E5A690000A7C6 /* PDFViewController.swift */,
 			);
 			name = Controllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		EDB3AE7B1D6A6E180023A807 /* Resources */ = {
@@ -301,18 +307,20 @@
 				EDB3AE7C1D6A6E370023A807 /* book.json */,
 			);
 			name = Resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		EDB3AE8A1D6BC7950023A807 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				ED8E540B1D359AB100DD8F94 /* LaunchScreen.storyboard */,
 				EDB3AE871D6BC7890023A807 /* BookTableViewCell.xib */,
-				ED3B1E0A1D6E5A690000A7C6 /* PDFViewController.xib */,
 				EDB3AE831D6ACAE80023A807 /* BookViewController.xib */,
+				ED8E540B1D359AB100DD8F94 /* LaunchScreen.storyboard */,
 				DFD9E2551E6AE6C6004F0D5F /* Main.storyboard */,
+				ED3B1E0A1D6E5A690000A7C6 /* PDFViewController.xib */,
 			);
 			name = Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		EDC9E17A1D4A748900E4D047 /* Framework */ = {
@@ -321,18 +329,20 @@
 				EDC9E1811D4BB39700E4D047 /* SetAndDictTests.swift */,
 			);
 			name = Framework;
+			path = Framework;
 			sourceTree = "<group>";
 		};
 		EDC9E17B1D4A74A000E4D047 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				ED0788C61D60E2AF00C4773C /* BookTests.swift */,
+				EDB3AE731D67F5ED0023A807 /* JSONTests.swift */,
 				EDB3AE7E1D6A79190023A807 /* LibraryTests.swift */,
 				EDC9E1781D4A724D00E4D047 /* MultiDictionaryTests.swift */,
 				ED0788C41D60E07D00C4773C /* TagTests.swift */,
-				ED0788C61D60E2AF00C4773C /* BookTests.swift */,
-				EDB3AE731D67F5ED0023A807 /* JSONTests.swift */,
 			);
 			name = App;
+			path = App;
 			sourceTree = "<group>";
 		};
 		EDC9E17F1D4AA2AD00E4D047 /* DataStructures */ = {
@@ -341,6 +351,7 @@
 				EDC9E17C1D4AA2A800E4D047 /* MultiDictionary.swift */,
 			);
 			name = DataStructures;
+			path = DataStructures;
 			sourceTree = "<group>";
 		};
 		EDEFFBD41D35AA9D00A5E75C /* Frameworks */ = {
@@ -349,36 +360,39 @@
 				DFD9E2351E6A1BA7004F0D5F /* UserDefaults.swift */,
 			);
 			name = Frameworks;
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		EDEFFBD51D35AAA700A5E75C /* App */ = {
 			isa = PBXGroup;
 			children = (
-				ED8E54001D359AB100DD8F94 /* AppDelegate.swift */,
-				DFD9E24C1E6ADC14004F0D5F /* Interactors */,
-				EDEFFBD41D35AA9D00A5E75C /* Frameworks */,
-				DF8EB9BD1E69F176008EE780 /* Managers */,
-				DF8EB9BA1E69F0D8008EE780 /* Helpers */,
 				EDA79C591D66A226001A27F7 /* Controllers */,
+				EDC9E17F1D4AA2AD00E4D047 /* DataStructures */,
+				EDEFFBD41D35AA9D00A5E75C /* Frameworks */,
+				DF8EB9BA1E69F0D8008EE780 /* Helpers */,
+				DFD9E24C1E6ADC14004F0D5F /* Interactors */,
+				DF8EB9BD1E69F176008EE780 /* Managers */,
 				ED4908A21D5D02BA00212410 /* Model */,
 				EDEFFBD71D35AAF300A5E75C /* NetworkUtils */,
-				EDC9E17F1D4AA2AD00E4D047 /* DataStructures */,
-				EDB3AE8A1D6BC7950023A807 /* Views */,
 				EDEFFBD61D35AAB300A5E75C /* Resources */,
+				EDB3AE8A1D6BC7950023A807 /* Views */,
+				ED8E54001D359AB100DD8F94 /* AppDelegate.swift */,
 			);
 			name = App;
+			path = App;
 			sourceTree = "<group>";
 		};
 		EDEFFBD61D35AAB300A5E75C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				ED8E54091D359AB100DD8F94 /* Assets.xcassets */,
+				ED8E540E1D359AB100DD8F94 /* Info.plist */,
+				EDB3AE6B1D67E2000023A807 /* books_readable.json */,
 				EDB3AE751D68048D0023A807 /* emptyBookCover.png */,
 				EDB3AE781D6805230023A807 /* emptyPdf.pdf */,
-				EDB3AE6B1D67E2000023A807 /* books_readable.json */,
-				ED8E540E1D359AB100DD8F94 /* Info.plist */,
 			);
 			name = Resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		EDEFFBD71D35AAF300A5E75C /* NetworkUtils */ = {
@@ -387,6 +401,7 @@
 				ED07720E1D595AE60074331F /* AsyncData.swift */,
 			);
 			name = NetworkUtils;
+			path = NetworkUtils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -626,6 +641,7 @@
 				ED8E540C1D359AB100DD8F94 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -729,7 +745,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6RPGGVZM93;
-				INFOPLIST_FILE = HackerBooksLite/Info.plist;
+				INFOPLIST_FILE = HackerBooksLite/App/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JoseJacin.HackerBooksLite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -742,7 +758,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6RPGGVZM93;
-				INFOPLIST_FILE = HackerBooksLite/Info.plist;
+				INFOPLIST_FILE = HackerBooksLite/App/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JoseJacin.HackerBooksLite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
