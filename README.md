@@ -1,6 +1,6 @@
 #KeepCoding IV Edición - KeepCoding Master Bootcampo - Programación iOS Avanzada - Práctica HackerBooks Pro
 
-**Lo descrito anteriormente se encuentra en la rama #master** 
+**Lo descrito anteriormente se encuentra en la rama #practica** 
 
 **Voy  continuar con el resto de puntos en una rama diferente**
 
