@@ -1,0 +1,620 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3319D0C11E67975C00E33ADE /* Pdf+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3319D0C01E67975C00E33ADE /* Pdf+Utils.swift */; };
+		3319D0C31E67984B00E33ADE /* Cover+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3319D0C21E67984B00E33ADE /* Cover+Utils.swift */; };
+		3319D0C51E67ADA600E33ADE /* AnnotationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3319D0C41E67ADA600E33ADE /* AnnotationCollectionViewCell.swift */; };
+		3319D0C91E67AF7100E33ADE /* Photo+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3319D0C81E67AF7100E33ADE /* Photo+Utils.swift */; };
+		3319D0CB1E67B3F300E33ADE /* AddEditAnnotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3319D0CA1E67B3F300E33ADE /* AddEditAnnotationViewController.swift */; };
+		3319D0CD1E6890B900E33ADE /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3319D0CC1E6890B900E33ADE /* UserDefaults.swift */; };
+		3319D0CF1E68C68F00E33ADE /* AddEditAnnotationViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3319D0CE1E68C68F00E33ADE /* AddEditAnnotationViewController+Utils.swift */; };
+		3319D0D11E68F57200E33ADE /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3319D0D01E68F57200E33ADE /* DateFormatter.swift */; };
+		3319D0D31E6A1E4600E33ADE /* Location+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3319D0D21E6A1E4500E33ADE /* Location+Utils.swift */; };
+		3319D0D51E6A23DF00E33ADE /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3319D0D41E6A23DF00E33ADE /* MapPin.swift */; };
+		3319D0D71E6A291B00E33ADE /* MapViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3319D0D61E6A291B00E33ADE /* MapViewController+Utils.swift */; };
+		335FB6381E618D7A00A7DCD7 /* DownloadAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335FB6371E618D7A00A7DCD7 /* DownloadAsync.swift */; };
+		335FB63A1E618E8A00A7DCD7 /* DownloadAsyncGCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335FB6391E618E8A00A7DCD7 /* DownloadAsyncGCD.swift */; };
+		335FB63C1E619A9700A7DCD7 /* Author+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335FB63B1E619A9700A7DCD7 /* Author+Utils.swift */; };
+		335FB63E1E619AAB00A7DCD7 /* Tag+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335FB63D1E619AAB00A7DCD7 /* Tag+Utils.swift */; };
+		335FB6411E619D9D00A7DCD7 /* JSONInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335FB6401E619D9D00A7DCD7 /* JSONInteractor.swift */; };
+		335FB6431E619ECC00A7DCD7 /* DataInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335FB6421E619ECC00A7DCD7 /* DataInteractor.swift */; };
+		335FB6451E619EF400A7DCD7 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335FB6441E619EF400A7DCD7 /* Interactor.swift */; };
+		335FB6471E61A20600A7DCD7 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335FB6461E61A20600A7DCD7 /* Typealias.swift */; };
+		335FB6491E61A2BC00A7DCD7 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335FB6481E61A2BC00A7DCD7 /* CoreDataManager.swift */; };
+		335FB64B1E6227A600A7DCD7 /* BooksViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335FB64A1E6227A600A7DCD7 /* BooksViewController+Utils.swift */; };
+		335FB64D1E6227FB00A7DCD7 /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335FB64C1E6227FB00A7DCD7 /* BookCollectionViewCell.swift */; };
+		335FB64F1E63799D00A7DCD7 /* FirstTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335FB64E1E63799D00A7DCD7 /* FirstTime.swift */; };
+		335FB6511E6382CE00A7DCD7 /* BookTag+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335FB6501E6382CE00A7DCD7 /* BookTag+Utils.swift */; };
+		33B835371E64A3390030A440 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B835361E64A3390030A440 /* LoadingViewController.swift */; };
+		33B835391E64A4F40030A440 /* SingleBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B835381E64A4F40030A440 /* SingleBookViewController.swift */; };
+		33B8353B1E64A5380030A440 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B8353A1E64A5380030A440 /* PDFViewController.swift */; };
+		33B8353D1E64D3230030A440 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B8353C1E64D3230030A440 /* MapViewController.swift */; };
+		33B8353F1E6783810030A440 /* AnnotationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B8353E1E6783810030A440 /* AnnotationsViewController.swift */; };
+		33B835411E6784FD0030A440 /* AnnotationsViewControllerFetchedResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B835401E6784FD0030A440 /* AnnotationsViewControllerFetchedResults.swift */; };
+		33B835431E6785380030A440 /* AnnotationsViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B835421E6785380030A440 /* AnnotationsViewController+Utils.swift */; };
+		33B835451E678DB10030A440 /* Annotation+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B835441E678DB10030A440 /* Annotation+Utils.swift */; };
+		33E6B5FD1E5F8DAA005E00C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E6B5FC1E5F8DAA005E00C5 /* AppDelegate.swift */; };
+		33E6B5FF1E5F8DAA005E00C5 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E6B5FE1E5F8DAA005E00C5 /* BooksViewController.swift */; };
+		33E6B6021E5F8DAA005E00C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33E6B6001E5F8DAA005E00C5 /* Main.storyboard */; };
+		33E6B6051E5F8DAA005E00C5 /* HackerBooksPro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33E6B6031E5F8DAA005E00C5 /* HackerBooksPro.xcdatamodeld */; };
+		33E6B6071E5F8DAA005E00C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33E6B6061E5F8DAA005E00C5 /* Assets.xcassets */; };
+		33E6B60A1E5F8DAA005E00C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33E6B6081E5F8DAA005E00C5 /* LaunchScreen.storyboard */; };
+		33E6B63A1E5FB99F005E00C5 /* BooksViewControllerFetchedResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E6B6391E5FB99F005E00C5 /* BooksViewControllerFetchedResults.swift */; };
+		33E6B63C1E5FBA9A005E00C5 /* Book+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E6B63B1E5FBA9A005E00C5 /* Book+Utils.swift */; };
+		33E6B63E1E5FBBD9005E00C5 /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E6B63D1E5FBBD9005E00C5 /* Files.swift */; };
+		33E6B6401E5FBBF5005E00C5 /* JSONProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E6B63F1E5FBBF5005E00C5 /* JSONProcessing.swift */; };
+		33E6B6421E5FBC2F005E00C5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E6B6411E5FBC2F005E00C5 /* Constants.swift */; };
+		33E6B6451E5FBCDA005E00C5 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E6B6441E5FBCDA005E00C5 /* Bundle.swift */; };
+		33E6B6471E5FBD29005E00C5 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E6B6461E5FBD29005E00C5 /* Errors.swift */; };
+		DFAAC8931E6B2C710009D93F /* HackerBooksPro-defaultBookCover.png in Resources */ = {isa = PBXBuildFile; fileRef = DFAAC8921E6B2C710009D93F /* HackerBooksPro-defaultBookCover.png */; };
+		DFAAC8971E6B2D1E0009D93F /* HackerBooksPro-defaultPdf.pdf in Resources */ = {isa = PBXBuildFile; fileRef = DFAAC8961E6B2D1E0009D93F /* HackerBooksPro-defaultPdf.pdf */; };
+		DFAAC8991E6C2BEB0009D93F /* HackerBooksPro-defaultImageAnnotation.png in Resources */ = {isa = PBXBuildFile; fileRef = DFAAC8981E6C2BEB0009D93F /* HackerBooksPro-defaultImageAnnotation.png */; };
+		DFB4387C1E6C7B5200EE8645 /* NSUbiquitousKeyValueStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB4387B1E6C7B5200EE8645 /* NSUbiquitousKeyValueStore.swift */; };
+		DFEE70281E6C8FEF00974308 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFEE70271E6C8FEF00974308 /* MapKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3319D0C01E67975C00E33ADE /* Pdf+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pdf+Utils.swift"; sourceTree = "<group>"; };
+		3319D0C21E67984B00E33ADE /* Cover+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cover+Utils.swift"; sourceTree = "<group>"; };
+		3319D0C41E67ADA600E33ADE /* AnnotationCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationCollectionViewCell.swift; sourceTree = "<group>"; };
+		3319D0C81E67AF7100E33ADE /* Photo+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Photo+Utils.swift"; sourceTree = "<group>"; };
+		3319D0CA1E67B3F300E33ADE /* AddEditAnnotationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEditAnnotationViewController.swift; sourceTree = "<group>"; };
+		3319D0CC1E6890B900E33ADE /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		3319D0CE1E68C68F00E33ADE /* AddEditAnnotationViewController+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AddEditAnnotationViewController+Utils.swift"; path = "AddEditAnnotationViewController+Utils.swift"; sourceTree = "<group>"; };
+		3319D0D01E68F57200E33ADE /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		3319D0D21E6A1E4500E33ADE /* Location+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Location+Utils.swift"; sourceTree = "<group>"; };
+		3319D0D41E6A23DF00E33ADE /* MapPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPin.swift; sourceTree = "<group>"; };
+		3319D0D61E6A291B00E33ADE /* MapViewController+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "MapViewController+Utils.swift"; path = "MapViewController+Utils.swift"; sourceTree = "<group>"; };
+		335FB6371E618D7A00A7DCD7 /* DownloadAsync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadAsync.swift; sourceTree = "<group>"; };
+		335FB6391E618E8A00A7DCD7 /* DownloadAsyncGCD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadAsyncGCD.swift; sourceTree = "<group>"; };
+		335FB63B1E619A9700A7DCD7 /* Author+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Author+Utils.swift"; sourceTree = "<group>"; };
+		335FB63D1E619AAB00A7DCD7 /* Tag+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tag+Utils.swift"; sourceTree = "<group>"; };
+		335FB6401E619D9D00A7DCD7 /* JSONInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONInteractor.swift; sourceTree = "<group>"; };
+		335FB6421E619ECC00A7DCD7 /* DataInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataInteractor.swift; sourceTree = "<group>"; };
+		335FB6441E619EF400A7DCD7 /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		335FB6461E61A20600A7DCD7 /* Typealias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
+		335FB6481E61A2BC00A7DCD7 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		335FB64A1E6227A600A7DCD7 /* BooksViewController+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "BooksViewController+Utils.swift"; path = "BooksViewController+Utils.swift"; sourceTree = "<group>"; };
+		335FB64C1E6227FB00A7DCD7 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
+		335FB64E1E63799D00A7DCD7 /* FirstTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTime.swift; sourceTree = "<group>"; };
+		335FB6501E6382CE00A7DCD7 /* BookTag+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BookTag+Utils.swift"; sourceTree = "<group>"; };
+		33B835361E64A3390030A440 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		33B835381E64A4F40030A440 /* SingleBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleBookViewController.swift; sourceTree = "<group>"; };
+		33B8353A1E64A5380030A440 /* PDFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PDFViewController.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
+		33B8353C1E64D3230030A440 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		33B8353E1E6783810030A440 /* AnnotationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationsViewController.swift; sourceTree = "<group>"; };
+		33B835401E6784FD0030A440 /* AnnotationsViewControllerFetchedResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationsViewControllerFetchedResults.swift; sourceTree = "<group>"; };
+		33B835421E6785380030A440 /* AnnotationsViewController+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AnnotationsViewController+Utils.swift"; path = "AnnotationsViewController+Utils.swift"; sourceTree = "<group>"; };
+		33B835441E678DB10030A440 /* Annotation+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Annotation+Utils.swift"; sourceTree = "<group>"; };
+		33E6B5F91E5F8DAA005E00C5 /* HackerBooksPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerBooksPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		33E6B5FC1E5F8DAA005E00C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		33E6B5FE1E5F8DAA005E00C5 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
+		33E6B6011E5F8DAA005E00C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		33E6B6041E5F8DAA005E00C5 /* HackerBooksPro.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HackerBooksPro.xcdatamodel; sourceTree = "<group>"; };
+		33E6B6061E5F8DAA005E00C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		33E6B6091E5F8DAA005E00C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		33E6B60B1E5F8DAA005E00C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33E6B6391E5FB99F005E00C5 /* BooksViewControllerFetchedResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewControllerFetchedResults.swift; sourceTree = "<group>"; };
+		33E6B63B1E5FBA9A005E00C5 /* Book+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Book+Utils.swift"; sourceTree = "<group>"; };
+		33E6B63D1E5FBBD9005E00C5 /* Files.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Files.swift; sourceTree = "<group>"; };
+		33E6B63F1E5FBBF5005E00C5 /* JSONProcessing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONProcessing.swift; sourceTree = "<group>"; };
+		33E6B6411E5FBC2F005E00C5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		33E6B6441E5FBCDA005E00C5 /* Bundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		33E6B6461E5FBD29005E00C5 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		DFAAC8921E6B2C710009D93F /* HackerBooksPro-defaultBookCover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HackerBooksPro-defaultBookCover.png"; sourceTree = "<group>"; };
+		DFAAC8961E6B2D1E0009D93F /* HackerBooksPro-defaultPdf.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "HackerBooksPro-defaultPdf.pdf"; sourceTree = "<group>"; };
+		DFAAC8981E6C2BEB0009D93F /* HackerBooksPro-defaultImageAnnotation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HackerBooksPro-defaultImageAnnotation.png"; sourceTree = "<group>"; };
+		DFB4387B1E6C7B5200EE8645 /* NSUbiquitousKeyValueStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSUbiquitousKeyValueStore.swift; sourceTree = "<group>"; };
+		DFEE70271E6C8FEF00974308 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DFEE70291E6C943A00974308 /* HackerBooksPro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HackerBooksPro.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		33E6B5F61E5F8DAA005E00C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFEE70281E6C8FEF00974308 /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		335FB6361E618D4400A7DCD7 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				335FB6481E61A2BC00A7DCD7 /* CoreDataManager.swift */,
+				335FB6371E618D7A00A7DCD7 /* DownloadAsync.swift */,
+				335FB6391E618E8A00A7DCD7 /* DownloadAsyncGCD.swift */,
+			);
+			name = Managers;
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		335FB63F1E619D5400A7DCD7 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				335FB6421E619ECC00A7DCD7 /* DataInteractor.swift */,
+				335FB6441E619EF400A7DCD7 /* Interactor.swift */,
+				335FB6401E619D9D00A7DCD7 /* JSONInteractor.swift */,
+			);
+			name = Interactors;
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		335FB6561E63C9CE00A7DCD7 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				33E6B6061E5F8DAA005E00C5 /* Assets.xcassets */,
+				DFAAC8921E6B2C710009D93F /* HackerBooksPro-defaultBookCover.png */,
+				DFAAC8981E6C2BEB0009D93F /* HackerBooksPro-defaultImageAnnotation.png */,
+				DFAAC8961E6B2D1E0009D93F /* HackerBooksPro-defaultPdf.pdf */,
+				33E6B60B1E5F8DAA005E00C5 /* Info.plist */,
+			);
+			name = Assets;
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		33E6B5F01E5F8DA9005E00C5 = {
+			isa = PBXGroup;
+			children = (
+				DFEE70261E6C8FEF00974308 /* Frameworks */,
+				33E6B5FB1E5F8DAA005E00C5 /* HackerBooksPro */,
+				33E6B5FA1E5F8DAA005E00C5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		33E6B5FA1E5F8DAA005E00C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				33E6B5F91E5F8DAA005E00C5 /* HackerBooksPro.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		33E6B5FB1E5F8DAA005E00C5 /* HackerBooksPro */ = {
+			isa = PBXGroup;
+			children = (
+				33E6B6351E5FB07E005E00C5 /* App */,
+				DFEE70291E6C943A00974308 /* HackerBooksPro.entitlements */,
+			);
+			name = HackerBooksPro;
+			path = HackerBooksPro;
+			sourceTree = "<group>";
+		};
+		33E6B6111E5F8DB9005E00C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				33B835441E678DB10030A440 /* Annotation+Utils.swift */,
+				335FB63B1E619A9700A7DCD7 /* Author+Utils.swift */,
+				33E6B63B1E5FBA9A005E00C5 /* Book+Utils.swift */,
+				335FB6501E6382CE00A7DCD7 /* BookTag+Utils.swift */,
+				3319D0C21E67984B00E33ADE /* Cover+Utils.swift */,
+				33E6B6031E5F8DAA005E00C5 /* HackerBooksPro.xcdatamodeld */,
+				3319D0D21E6A1E4500E33ADE /* Location+Utils.swift */,
+				3319D0C01E67975C00E33ADE /* Pdf+Utils.swift */,
+				3319D0C81E67AF7100E33ADE /* Photo+Utils.swift */,
+				335FB63D1E619AAB00A7DCD7 /* Tag+Utils.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		33E6B6121E5F8DC0005E00C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3319D0C41E67ADA600E33ADE /* AnnotationCollectionViewCell.swift */,
+				335FB64C1E6227FB00A7DCD7 /* BookCollectionViewCell.swift */,
+				33E6B6081E5F8DAA005E00C5 /* LaunchScreen.storyboard */,
+				33E6B6001E5F8DAA005E00C5 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		33E6B6131E5F8DC5005E00C5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				33E6B6371E5FB8F3005E00C5 /* FetchedResults */,
+				33E6B6381E5FB978005E00C5 /* Utils */,
+				3319D0CA1E67B3F300E33ADE /* AddEditAnnotationViewController.swift */,
+				33B8353E1E6783810030A440 /* AnnotationsViewController.swift */,
+				33E6B5FE1E5F8DAA005E00C5 /* BooksViewController.swift */,
+				33B835361E64A3390030A440 /* LoadingViewController.swift */,
+				33B8353C1E64D3230030A440 /* MapViewController.swift */,
+				33B8353A1E64A5380030A440 /* PDFViewController.swift */,
+				33B835381E64A4F40030A440 /* SingleBookViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		33E6B6351E5FB07E005E00C5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				335FB6561E63C9CE00A7DCD7 /* Assets */,
+				33E6B6131E5F8DC5005E00C5 /* Controller */,
+				33E6B6431E5FBCC4005E00C5 /* Frameworks */,
+				33E6B6361E5FB252005E00C5 /* Helpers */,
+				335FB63F1E619D5400A7DCD7 /* Interactors */,
+				335FB6361E618D4400A7DCD7 /* Managers */,
+				33E6B6111E5F8DB9005E00C5 /* Model */,
+				33E6B6121E5F8DC0005E00C5 /* View */,
+				33E6B5FC1E5F8DAA005E00C5 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		33E6B6361E5FB252005E00C5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				33E6B6411E5FBC2F005E00C5 /* Constants.swift */,
+				3319D0D01E68F57200E33ADE /* DateFormatter.swift */,
+				33E6B6461E5FBD29005E00C5 /* Errors.swift */,
+				33E6B63D1E5FBBD9005E00C5 /* Files.swift */,
+				335FB64E1E63799D00A7DCD7 /* FirstTime.swift */,
+				33E6B63F1E5FBBF5005E00C5 /* JSONProcessing.swift */,
+				3319D0D41E6A23DF00E33ADE /* MapPin.swift */,
+				335FB6461E61A20600A7DCD7 /* Typealias.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		33E6B6371E5FB8F3005E00C5 /* FetchedResults */ = {
+			isa = PBXGroup;
+			children = (
+				33B835401E6784FD0030A440 /* AnnotationsViewControllerFetchedResults.swift */,
+				33E6B6391E5FB99F005E00C5 /* BooksViewControllerFetchedResults.swift */,
+			);
+			path = FetchedResults;
+			sourceTree = "<group>";
+		};
+		33E6B6381E5FB978005E00C5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3319D0CE1E68C68F00E33ADE /* AddEditAnnotationViewController+Utils.swift */,
+				33B835421E6785380030A440 /* AnnotationsViewController+Utils.swift */,
+				335FB64A1E6227A600A7DCD7 /* BooksViewController+Utils.swift */,
+				3319D0D61E6A291B00E33ADE /* MapViewController+Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		33E6B6431E5FBCC4005E00C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33E6B6441E5FBCDA005E00C5 /* Bundle.swift */,
+				DFB4387B1E6C7B5200EE8645 /* NSUbiquitousKeyValueStore.swift */,
+				3319D0CC1E6890B900E33ADE /* UserDefaults.swift */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		DFEE70261E6C8FEF00974308 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DFEE70271E6C8FEF00974308 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		33E6B5F81E5F8DAA005E00C5 /* HackerBooksPro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33E6B60E1E5F8DAA005E00C5 /* Build configuration list for PBXNativeTarget "HackerBooksPro" */;
+			buildPhases = (
+				33E6B5F51E5F8DAA005E00C5 /* Sources */,
+				33E6B5F61E5F8DAA005E00C5 /* Frameworks */,
+				33E6B5F71E5F8DAA005E00C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HackerBooksPro;
+			productName = HackerBooks2;
+			productReference = 33E6B5F91E5F8DAA005E00C5 /* HackerBooksPro.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		33E6B5F11E5F8DA9005E00C5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = ERISCO;
+				TargetAttributes = {
+					33E6B5F81E5F8DAA005E00C5 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 33E6B5F41E5F8DA9005E00C5 /* Build configuration list for PBXProject "HackerBooksPro" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 33E6B5F01E5F8DA9005E00C5;
+			productRefGroup = 33E6B5FA1E5F8DAA005E00C5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				33E6B5F81E5F8DAA005E00C5 /* HackerBooksPro */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		33E6B5F71E5F8DAA005E00C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFAAC8931E6B2C710009D93F /* HackerBooksPro-defaultBookCover.png in Resources */,
+				DFAAC8991E6C2BEB0009D93F /* HackerBooksPro-defaultImageAnnotation.png in Resources */,
+				DFAAC8971E6B2D1E0009D93F /* HackerBooksPro-defaultPdf.pdf in Resources */,
+				33E6B60A1E5F8DAA005E00C5 /* LaunchScreen.storyboard in Resources */,
+				33E6B6071E5F8DAA005E00C5 /* Assets.xcassets in Resources */,
+				33E6B6021E5F8DAA005E00C5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		33E6B5F51E5F8DAA005E00C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3319D0C11E67975C00E33ADE /* Pdf+Utils.swift in Sources */,
+				33E6B63A1E5FB99F005E00C5 /* BooksViewControllerFetchedResults.swift in Sources */,
+				3319D0D31E6A1E4600E33ADE /* Location+Utils.swift in Sources */,
+				335FB63A1E618E8A00A7DCD7 /* DownloadAsyncGCD.swift in Sources */,
+				33E6B6451E5FBCDA005E00C5 /* Bundle.swift in Sources */,
+				335FB64B1E6227A600A7DCD7 /* BooksViewController+Utils.swift in Sources */,
+				3319D0C51E67ADA600E33ADE /* AnnotationCollectionViewCell.swift in Sources */,
+				3319D0D71E6A291B00E33ADE /* MapViewController+Utils.swift in Sources */,
+				335FB6491E61A2BC00A7DCD7 /* CoreDataManager.swift in Sources */,
+				33E6B5FF1E5F8DAA005E00C5 /* BooksViewController.swift in Sources */,
+				335FB6431E619ECC00A7DCD7 /* DataInteractor.swift in Sources */,
+				33B835391E64A4F40030A440 /* SingleBookViewController.swift in Sources */,
+				33B835371E64A3390030A440 /* LoadingViewController.swift in Sources */,
+				33B8353B1E64A5380030A440 /* PDFViewController.swift in Sources */,
+				335FB63E1E619AAB00A7DCD7 /* Tag+Utils.swift in Sources */,
+				3319D0C91E67AF7100E33ADE /* Photo+Utils.swift in Sources */,
+				33E6B5FD1E5F8DAA005E00C5 /* AppDelegate.swift in Sources */,
+				33B835451E678DB10030A440 /* Annotation+Utils.swift in Sources */,
+				33E6B6051E5F8DAA005E00C5 /* HackerBooksPro.xcdatamodeld in Sources */,
+				33E6B63C1E5FBA9A005E00C5 /* Book+Utils.swift in Sources */,
+				3319D0C31E67984B00E33ADE /* Cover+Utils.swift in Sources */,
+				33E6B6471E5FBD29005E00C5 /* Errors.swift in Sources */,
+				335FB6471E61A20600A7DCD7 /* Typealias.swift in Sources */,
+				3319D0D51E6A23DF00E33ADE /* MapPin.swift in Sources */,
+				3319D0CF1E68C68F00E33ADE /* AddEditAnnotationViewController+Utils.swift in Sources */,
+				33E6B6401E5FBBF5005E00C5 /* JSONProcessing.swift in Sources */,
+				335FB6381E618D7A00A7DCD7 /* DownloadAsync.swift in Sources */,
+				335FB6451E619EF400A7DCD7 /* Interactor.swift in Sources */,
+				335FB6411E619D9D00A7DCD7 /* JSONInteractor.swift in Sources */,
+				3319D0CB1E67B3F300E33ADE /* AddEditAnnotationViewController.swift in Sources */,
+				3319D0CD1E6890B900E33ADE /* UserDefaults.swift in Sources */,
+				33E6B63E1E5FBBD9005E00C5 /* Files.swift in Sources */,
+				335FB6511E6382CE00A7DCD7 /* BookTag+Utils.swift in Sources */,
+				3319D0D11E68F57200E33ADE /* DateFormatter.swift in Sources */,
+				33B835411E6784FD0030A440 /* AnnotationsViewControllerFetchedResults.swift in Sources */,
+				335FB64D1E6227FB00A7DCD7 /* BookCollectionViewCell.swift in Sources */,
+				33B8353F1E6783810030A440 /* AnnotationsViewController.swift in Sources */,
+				335FB64F1E63799D00A7DCD7 /* FirstTime.swift in Sources */,
+				335FB63C1E619A9700A7DCD7 /* Author+Utils.swift in Sources */,
+				33B835431E6785380030A440 /* AnnotationsViewController+Utils.swift in Sources */,
+				DFB4387C1E6C7B5200EE8645 /* NSUbiquitousKeyValueStore.swift in Sources */,
+				33E6B6421E5FBC2F005E00C5 /* Constants.swift in Sources */,
+				33B8353D1E64D3230030A440 /* MapViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		33E6B6001E5F8DAA005E00C5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33E6B6011E5F8DAA005E00C5 /* Base */,
+			);
+			name = Main.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+		33E6B6081E5F8DAA005E00C5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33E6B6091E5F8DAA005E00C5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		33E6B60C1E5F8DAA005E00C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		33E6B60D1E5F8DAA005E00C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		33E6B60F1E5F8DAA005E00C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HackerBooksPro.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = HackerBooksPro/App/Assets/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JoseJacin.HackerBooksPro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		33E6B6101E5F8DAA005E00C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HackerBooksPro.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = HackerBooksPro/App/Assets/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JoseJacin.HackerBooksPro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		33E6B5F41E5F8DA9005E00C5 /* Build configuration list for PBXProject "HackerBooksPro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33E6B60C1E5F8DAA005E00C5 /* Debug */,
+				33E6B60D1E5F8DAA005E00C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33E6B60E1E5F8DAA005E00C5 /* Build configuration list for PBXNativeTarget "HackerBooksPro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33E6B60F1E5F8DAA005E00C5 /* Debug */,
+				33E6B6101E5F8DAA005E00C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		33E6B6031E5F8DAA005E00C5 /* HackerBooksPro.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				33E6B6041E5F8DAA005E00C5 /* HackerBooksPro.xcdatamodel */,
+			);
+			currentVersion = 33E6B6041E5F8DAA005E00C5 /* HackerBooksPro.xcdatamodel */;
+			path = HackerBooksPro.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 33E6B5F11E5F8DA9005E00C5 /* Project object */;
+}
